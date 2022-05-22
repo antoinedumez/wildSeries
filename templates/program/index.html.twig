@@ -3,9 +3,14 @@
 {% block title %}Index - Wild Series{% endblock %}
 
 {% block body %}
-    <h1>{{ website }} index</h1>
 
+    <h1>Bienvenue, voici les séries : </h1>
     <img src="{{ asset('build/images/moi.jpg') }}" alt="ACME logo">
 
+    <form method="post">
+
+
+        <button name="id" type="submit" class="btn btn-primary" value="4">Submit</button>
+    </form>
 
 {% endblock %}
