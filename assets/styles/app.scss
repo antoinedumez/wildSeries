@@ -1,0 +1,13 @@
+// assets/styles/global.scss
+
+// customize some Bootstrap variables
+$primary: #ff928b;
+$secondary : #fec3a6;
+$success : #cdeac0;
+$info : #efe9ae;
+$warning : #ffac81;
+
+
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
