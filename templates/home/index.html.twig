@@ -4,6 +4,21 @@
 
 {% block body %}
 
-    <h1 class="text-secondary">Bienvenue </h1>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5 d-flex flex-column align-items-center">
+            <h1 class="display-5 fw-bold text-warning">Bienvenue</h1>
+            <p class="col-md-8 fs-4 text-center">Using a series of utilities, you can create this jumbotron, just like the one
+                in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+            <a href="{{ path('category_index') }}">
+                 <button class="btn btn-warning btn-lg" type="button">Voir les catégories </button>
+            </a>
+
+            <a href="{{ path('program_index') }}" class="m-4">
+                 <button class="btn btn-warning btn-lg" type="button">Voir les séries </button>
+            </a>
+
+        </div>
+    </div>
 
 {% endblock %}
+

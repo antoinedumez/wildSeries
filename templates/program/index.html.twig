@@ -4,13 +4,39 @@
 
 {% block body %}
 
-    <h1>Bienvenue, voici les séries : </h1>
-    <img src="{{ asset('build/images/moi.jpg') }}" alt="ACME logo">
+    <div class="px-4 py-5 my-2 text-center">
+        <h1 class="display-5 fw-bold">Toutes les séries</h1>
+    </div>
 
-    <form method="post">
+    <div class="album py-5 bg-light">
+        <div class="container">
 
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        <button name="id" type="submit" class="btn btn-primary" value="8">Submit</button>
-    </form>
+                {% for program in programs %}
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="{{ program.poster }}" alt="">
+
+                        <div class="card-body">
+                            <h3>{{ program.title }}</h3>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <a type="button" class="col-12 btn btn-sm btn-outline-secondary" href="{{ path
+                                        ("program_show", { id: program.id }) }}">Voir la fiche</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% else %}
+                    Aucune série trouvée.
+                {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+
+    <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Voici 3 séries de la catégorie </h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
+
+            {% for program in programs %}
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2> {{ program.title }} </h2>
+                    <p> {{ program.synopsis }} </p>
+                    <a href="{{ path("program_show", { id: program.id }) }}" class="btn btn-primary">
+                        Voir la fiche série
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+
+
+
+        </div>
+    </div>
+
+{% endblock %}
